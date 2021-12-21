@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/swipe_refresh_layout_signup"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:src="@color/purple_700"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rlRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivLogin"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:src="@color/purple_200" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Daftar"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/_15ssp"
+            tools:ignore="MissingPrefix" />
+
+        <EditText
+            android:id="@+id/edFullName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@color/white"
+            android:gravity="start|center_vertical"
+            android:hint="Nama Lengkap"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="MissingPrefix" />
+
+        <EditText
+            android:id="@+id/edNIK"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@id/edFullName"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/white"
+            android:gravity="start|center_vertical"
+            android:hint="Masukan NIK"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:id="@+id/lnemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/white"
+            android:layout_below="@id/edNIK"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal">
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true" />
+
+            <EditText
+                android:id="@+id/edNoHP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:hint="Masukan nomer HP"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@id/lnemail"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/white"
+            android:gravity="start|center_vertical"
+            android:hint="Masukan kata sandi"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="MissingPrefix" />
+
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edPassword"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/white"
+            android:backgroundTint="@color/purple_200"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:padding="@dimen/_10sdp"
+            android:text="Daftar"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="sUDAH PUNYA AKUN?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:onClick="onClick"
+                android:text="LOGIN"
+                android:gravity="center_horizontal"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11ssp"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

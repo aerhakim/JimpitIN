@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEDED">
+
+    <LinearLayout
+        android:id="@+id/rlForgetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/anna" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Verifikasi OTP"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/_14ssp"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/nohp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:text="+6289517851144"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="MissingPrefix" />
+
+        <EditText
+            android:id="@+id/edOTP"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/white"
+            android:gravity="start|center_vertical"
+            android:hint="Masukan Kode OTP"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_gravity="end"
+            android:text="00:30"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:id="@+id/lltimer"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Tidak Menerima OTP?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/tvResendOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Kirim Ulang OTP"
+                android:textColor="@color/purple_700"
+                android:textSize="@dimen/_11ssp"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVerif"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@color/purple_500"
+            android:gravity="center"
+            android:text="Verifikasi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="MissingPrefix" />
+    </LinearLayout>
+
+
+</RelativeLayout>

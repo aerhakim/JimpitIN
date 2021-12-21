@@ -1,0 +1,19 @@
+<!-- bottom_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="Home"
+        app:cnb_iconColor="@color/black"/>
+    <item
+        android:id="@+id/transaksi"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="History"
+        app:cnb_iconColor="@color/black"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_outline_person_outline_24"
+        android:title="Profile"
+        app:cnb_iconColor="@color/black" />
+</menu>
