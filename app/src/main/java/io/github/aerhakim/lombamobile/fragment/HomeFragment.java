@@ -24,7 +24,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.smarteist.autoimageslider.SliderView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -35,9 +37,11 @@ import io.github.aerhakim.lombamobile.activity.NotifikasiActivity;
 import io.github.aerhakim.lombamobile.activity.UangJimpitanActivity;
 import io.github.aerhakim.lombamobile.activity.UangSampahActivity;
 import io.github.aerhakim.lombamobile.adapter.AgendaAdapter;
+import io.github.aerhakim.lombamobile.adapter.SliderAdapter;
 import io.github.aerhakim.lombamobile.api.Config;
 import io.github.aerhakim.lombamobile.model.Agenda;
 import io.github.aerhakim.lombamobile.model.GetAgenda;
+import io.github.aerhakim.lombamobile.model.SliderModel;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -54,6 +58,11 @@ public class HomeFragment extends Fragment {
     List<Agenda> agendaList;
     ShimmerFrameLayout shimmerFrameLayout;
     String userId;
+    // Urls of our images.
+    String url1 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah.png";
+    String url2 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah2.png";
+    String url3 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah.png";
+    String url4 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah2.png";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -141,6 +150,30 @@ public class HomeFragment extends Fragment {
             public void onFailure(Call<GetAgenda> call, Throwable t) {
             }
         });
+
+        // Slide Image
+        ArrayList<SliderModel> sliderDataArrayList = new ArrayList<>();
+
+        SliderView sliderView = view.findViewById(R.id.slider);
+
+        sliderDataArrayList.add(new SliderModel(url1));
+        sliderDataArrayList.add(new SliderModel(url2));
+        sliderDataArrayList.add(new SliderModel(url3));
+        sliderDataArrayList.add(new SliderModel(url4));
+
+        SliderAdapter adapter = new SliderAdapter(getActivity(), sliderDataArrayList);
+
+        sliderView.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_LTR);
+
+        sliderView.setSliderAdapter(adapter);
+
+        sliderView.setScrollTimeInSec(3);
+
+        sliderView.setAutoCycle(true);
+
+        sliderView.startAutoCycle();
+
+        // End Slide Image
         return view;
     }
 
