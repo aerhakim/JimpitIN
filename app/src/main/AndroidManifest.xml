@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LombaMobile">
         <activity
+            android:name=".activity.DetailAgendaActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.UangJimpitanActivity"
             android:exported="false" />
         <activity

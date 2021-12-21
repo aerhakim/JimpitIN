@@ -10,11 +10,10 @@
     android:orientation="vertical">
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/iv_cover"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/cvagenda"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_shimmer"
         app:riv_corner_radius="10dp" />
 
 
@@ -24,11 +23,10 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_black_transparan"
+        android:background="@drawable/bg_shimmer_dark"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_Kategori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -37,7 +35,7 @@
             android:gravity="center"
             android:padding="2dp"
             android:text="Limbah"
-            android:textColor="@android:color/white"
+            android:textColor="@color/shimmer_dark"
             android:textSize="10sp"
             android:textStyle="bold" />
 
@@ -50,19 +48,19 @@
         android:layout_marginTop="120dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_black_transparan"
-        android:backgroundTint="@color/black"
+        android:background="@drawable/bg_shimmer_dark"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
+            android:background="@drawable/bg_shimmer"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -72,7 +70,7 @@
                 android:maxLines="4"
                 android:padding="2dp"
                 android:text="Penyluhan Pengelolaan Limbah Organik Rumah Tangga Oleh Dinas Kesehatan"
-                android:textColor="@android:color/white"
+                android:textColor="@color/shimmer_placeholder"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -85,8 +83,12 @@
             android:layout_weight="0"
             android:orientation="horizontal">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shimmer"
+                android:orientation="horizontal">
             <TextView
-                android:id="@+id/tv_tanggal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -95,11 +97,17 @@
                 android:drawablePadding="5dp"
                 android:padding="2dp"
                 android:text="25 Desember 2021"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="@color/shimmer_placeholder"
                 android:textSize="10sp" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shimmer"
+                android:orientation="horizontal">
             <TextView
-                android:id="@+id/tv_waktu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -108,21 +116,21 @@
                 android:drawablePadding="5dp"
                 android:padding="2dp"
                 android:text="09.00 - 11.00 WIB"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="@color/shimmer_placeholder"
                 android:textSize="10sp" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_tempat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="id"
                 android:textSize="10sp"
                 android:visibility="gone" />
+
             <TextView
                 android:layout_width="1dp"
                 android:layout_height="1dp"
-                android:visibility="gone"
-                android:id="@+id/tv_deskripsi"/>
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 
