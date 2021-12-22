@@ -8,16 +8,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+
 import java.util.List;
 
 import io.github.aerhakim.lombamobile.R;
 import io.github.aerhakim.lombamobile.activity.DetailAgendaActivity;
 import io.github.aerhakim.lombamobile.api.Config;
 import io.github.aerhakim.lombamobile.model.Agenda;
+
 
 
 
@@ -41,15 +45,15 @@ public class AgendaAdapter extends RecyclerView.Adapter<AgendaAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.agendaJudul.setText(agendaList.get(position).getDeskripsi());
-        holder.agendaDeskripsi.setText(agendaList.get(position).getJudul());
+        holder.agendaJudul.setText(agendaList.get(position).getJudul());
+        holder.agendaDeskripsi.setText(agendaList.get(position).getDeskripsi());
         holder.agendaTempat.setText(agendaList.get(position).getTempat());
         holder.agendaTanggal.setText(agendaList.get(position).getTanggal());
         holder.agendaWaktu.setText(agendaList.get(position).getWaktu());
         holder.agendaKategori.setText(agendaList.get(position).getTag());
         Glide.with(holder.itemView.getContext())
                 .load(Config.IMAGES_URL + agendaList.get(position).getGambar())
-                .apply(new RequestOptions().override(700, 400))
+                .apply(new RequestOptions())
                 .into(holder.agendaGambar);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +69,7 @@ public class AgendaAdapter extends RecyclerView.Adapter<AgendaAdapter.ViewHolder
             }
         });
     }
+
 
     @Override
     public int getItemCount() {

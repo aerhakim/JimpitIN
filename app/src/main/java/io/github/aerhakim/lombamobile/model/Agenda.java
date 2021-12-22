@@ -61,14 +61,4 @@ public class Agenda {
     }
 
 
-
-    public Agenda(String judul, String deskripsi, String gambar, String tanggal, String waktu, String tempat, String tag) {
-        this.judul = judul;
-        this.deskripsi = deskripsi;
-        this.tanggal = tanggal;
-        this.waktu = waktu;
-        this.tempat = tempat;
-        this.tag = tag;
-        this.gambar = gambar;
-    }
 }

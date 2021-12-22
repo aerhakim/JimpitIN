@@ -1,13 +1,16 @@
 package io.github.aerhakim.lombamobile.activity;
 
-import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.smarteist.autoimageslider.SliderView;
-import java.util.ArrayList;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import io.github.aerhakim.lombamobile.R;
-import io.github.aerhakim.lombamobile.adapter.SliderAdapter;
-import io.github.aerhakim.lombamobile.model.SliderModel;
 
 public class AgendaActivity extends AppCompatActivity {
 
@@ -17,5 +20,7 @@ public class AgendaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agenda);
 
+
     }
+
 }

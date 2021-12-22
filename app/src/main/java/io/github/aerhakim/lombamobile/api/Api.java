@@ -14,14 +14,14 @@ import retrofit2.http.POST;
 
 public interface Api {
 
-    @GET("lmagenda.php")
+    @GET("agenda")
     Call<GetAgenda> agenda();
 
     @GET("lmnotifikasi.php")
     Call<GetNotifikasi> notifikasi();
 
     @FormUrlEncoded
-    @POST("token.php")
+    @POST("application/controllers/token.php")
     Call<GetToken> register(
             @Field("token") String token
     );

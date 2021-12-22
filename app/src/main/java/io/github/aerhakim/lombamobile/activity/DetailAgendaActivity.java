@@ -21,12 +21,12 @@ public class DetailAgendaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_agenda);
-        judul = findViewById(R.id.judul);
-        gambar = findViewById(R.id.imageView);
-        deskripsi = findViewById(R.id.deskripsi);
-        tanggal = findViewById(R.id.tanggal);
-        waktu = findViewById(R.id.waktu);
-        tempat = findViewById(R.id.tempat);
+        judul = findViewById(R.id.tvJudul);
+        gambar = findViewById(R.id.ivFoto);
+        deskripsi = findViewById(R.id.tvDeskripsiAgenda);
+        tanggal = findViewById(R.id.tvtTanggal);
+        waktu = findViewById(R.id.tvWaktu);
+        tempat = findViewById(R.id.tvTempat);
 
         Intent mIntent = getIntent();
         judul.setText(mIntent.getStringExtra("judul"));

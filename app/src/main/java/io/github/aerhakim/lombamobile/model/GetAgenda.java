@@ -6,7 +6,7 @@ import java.util.List;
 
 public class GetAgenda {
 
-    @SerializedName("agenda")
+    @SerializedName("result")
     List<Agenda> agendaList;
     String error;
 

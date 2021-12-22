@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,17 +18,11 @@ import android.widget.Toast;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.annotation.Nullable;
 
 import io.github.aerhakim.lombamobile.R;
 import io.github.aerhakim.lombamobile.activity.AgendaActivity;
@@ -55,14 +48,15 @@ public class HomeFragment extends Fragment {
     TextView nama, showmore;
     GridLayout uangsampah, uangjimpitan;
     RecyclerView recyclerView;
-    List<Agenda> agendaList;
     ShimmerFrameLayout shimmerFrameLayout;
+    List<Agenda> agendaList;
     String userId;
     // Urls of our images.
-    String url1 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah.png";
-    String url2 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah2.png";
-    String url3 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah.png";
-    String url4 = "https://testfintech.000webhostapp.com/gambar/penyuluhan-sampah2.png";
+    String url1 = "http://192.168.113.137:8080/lombamobile/assets/files/image/penyuluhan-sampah.png";
+    String url2 = "http://192.168.113.137:8080/lombamobile/assets/files/image/penyuluhan-sampah2.png";
+    String url3 = "http://192.168.113.137:8080/lombamobile/assets/files/image/penyuluhan-sampah.png";
+    String url4 = "http://192.168.113.137:8080/lombamobile/assets/files/image/penyuluhan-sampah2.png";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,31 +64,34 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater
                 .inflate(R.layout.fragment_home, container, false);
-        fAuth = FirebaseAuth.getInstance();
+//        fAuth = FirebaseAuth.getInstance();
         nama = view.findViewById(R.id.nama);
         showmore = view.findViewById(R.id.showmore);
         uangjimpitan = view.findViewById(R.id.uangjimpitan);
         uangsampah = view.findViewById(R.id.uangsampah);
         shimmerFrameLayout = view.findViewById(R.id.shimmerLayout);
         notif = view.findViewById(R.id.notif);
-        fStore = FirebaseFirestore.getInstance();
-        userId = fAuth.getCurrentUser().getUid();
-        user = fAuth.getCurrentUser();
-        recyclerView=view.findViewById(R.id.rv_agenda);
+//        fStore = FirebaseFirestore.getInstance();
+//        userId = fAuth.getCurrentUser().getUid();
+//        user = fAuth.getCurrentUser();
+
+        recyclerView = view.findViewById(R.id.rv_agenda);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-        DocumentReference documentReference = fStore.collection("users").document(userId);
-        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                if (documentSnapshot.exists()) {
-                    nama.setText(documentSnapshot.getString("fName"));
 
-                } else {
-                    Log.d("tag", "onEvent: Document do not exists");
-                }
-            }
-        });
+//        DocumentReference documentReference = fStore.collection("users").document(userId);
+//        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+//            @Override
+//            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+//                if (documentSnapshot.exists()) {
+//                    nama.setText(documentSnapshot.getString("fName"));
+//
+//                } else {
+//                    Log.d("tag", "onEvent: Document do not exists");
+//                }
+//            }
+//        });
+
         notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,6 +120,36 @@ public class HomeFragment extends Fragment {
                 view.getContext().startActivity(mIntent);
             }
         });
+
+        // Slide Image
+        ArrayList<SliderModel> sliderDataArrayList = new ArrayList<>();
+
+        SliderView sliderView = view.findViewById(R.id.slider);
+
+        sliderDataArrayList.add(new SliderModel(url1));
+        sliderDataArrayList.add(new SliderModel(url2));
+        sliderDataArrayList.add(new SliderModel(url3));
+        sliderDataArrayList.add(new SliderModel(url4));
+
+        SliderAdapter adapter = new SliderAdapter(getActivity(), sliderDataArrayList);
+
+        sliderView.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_LTR);
+
+        sliderView.setSliderAdapter(adapter);
+
+        sliderView.setScrollTimeInSec(3);
+
+        sliderView.setAutoCycle(true);
+
+        sliderView.startAutoCycle();
+        // End Slide Image
+
+        getData();
+        return view;
+    }
+
+    public void getData(){
+
         Call<GetAgenda> call2= Config.getInstance().getApi().agenda();
         call2.enqueue(new Callback<GetAgenda>() {
             @Override
@@ -150,36 +177,6 @@ public class HomeFragment extends Fragment {
             public void onFailure(Call<GetAgenda> call, Throwable t) {
             }
         });
-
-        // Slide Image
-        ArrayList<SliderModel> sliderDataArrayList = new ArrayList<>();
-
-        SliderView sliderView = view.findViewById(R.id.slider);
-
-        sliderDataArrayList.add(new SliderModel(url1));
-        sliderDataArrayList.add(new SliderModel(url2));
-        sliderDataArrayList.add(new SliderModel(url3));
-        sliderDataArrayList.add(new SliderModel(url4));
-
-        SliderAdapter adapter = new SliderAdapter(getActivity(), sliderDataArrayList);
-
-        sliderView.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_LTR);
-
-        sliderView.setSliderAdapter(adapter);
-
-        sliderView.setScrollTimeInSec(3);
-
-        sliderView.setAutoCycle(true);
-
-        sliderView.startAutoCycle();
-
-        // End Slide Image
-        return view;
-    }
-
-    public void getData(){
-
-
 
     }
     @Override
