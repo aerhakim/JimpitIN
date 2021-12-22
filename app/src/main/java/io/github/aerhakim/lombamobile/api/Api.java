@@ -17,7 +17,7 @@ public interface Api {
     @GET("agenda")
     Call<GetAgenda> agenda();
 
-    @GET("lmnotifikasi.php")
+    @GET("notifikasi")
     Call<GetNotifikasi> notifikasi();
 
     @FormUrlEncoded

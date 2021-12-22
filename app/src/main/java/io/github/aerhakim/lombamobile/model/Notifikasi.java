@@ -2,16 +2,7 @@ package io.github.aerhakim.lombamobile.model;
 
 public class Notifikasi {
 
-    String judul,detail, tanggal, waktu, tempat;
-    int id;
-
-    public String getJudul() {
-        return judul;
-    }
-
-    public void setJudul(String judul) {
-        this.judul = judul;
-    }
+    String judul, detail, tanggal, waktu, tempat, id;
 
     public String getDetail() {
         return detail;
@@ -19,6 +10,22 @@ public class Notifikasi {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public void setJudul(String judul) {
+        this.judul = judul;
     }
 
     public String getTanggal() {
@@ -45,11 +52,5 @@ public class Notifikasi {
         this.tempat = tempat;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 }

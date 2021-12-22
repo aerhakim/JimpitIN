@@ -6,7 +6,7 @@ import java.util.List;
 
 public class GetNotifikasi {
 
-    @SerializedName("notifikasi")
+    @SerializedName("result")
     List<Notifikasi> notifikasiList;
     String error;
 

@@ -28,14 +28,15 @@
 
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/ivFoto"
-            android:layout_width="190dp"
-            android:layout_height="108dp"
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_40sdp"
-            android:src="@drawable/ava" />
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ava"
+            app:riv_oval="true" />
 
         <TextView
             android:id="@+id/tvnama"
@@ -227,7 +228,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv4"
+                android:id="@+id/logout"
                 android:backgroundTint="#FFD9D9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

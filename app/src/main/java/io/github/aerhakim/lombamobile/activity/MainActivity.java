@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cekKoneksi();
-//        getToken();
-//        createNotificationChannel();
+        getToken();
+        createNotificationChannel();
         chipNavigationBar = findViewById(R.id.navigation);
         chipNavigationBar.setItemSelected(R.id.home, true);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();

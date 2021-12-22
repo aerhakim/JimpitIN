@@ -3,10 +3,12 @@ package io.github.aerhakim.lombamobile.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +20,11 @@ import android.widget.Toast;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
@@ -64,33 +70,33 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater
                 .inflate(R.layout.fragment_home, container, false);
-//        fAuth = FirebaseAuth.getInstance();
+        fAuth = FirebaseAuth.getInstance();
         nama = view.findViewById(R.id.nama);
         showmore = view.findViewById(R.id.showmore);
         uangjimpitan = view.findViewById(R.id.uangjimpitan);
         uangsampah = view.findViewById(R.id.uangsampah);
         shimmerFrameLayout = view.findViewById(R.id.shimmerLayout);
         notif = view.findViewById(R.id.notif);
-//        fStore = FirebaseFirestore.getInstance();
-//        userId = fAuth.getCurrentUser().getUid();
-//        user = fAuth.getCurrentUser();
+        fStore = FirebaseFirestore.getInstance();
+        userId = fAuth.getCurrentUser().getUid();
+        user = fAuth.getCurrentUser();
 
         recyclerView = view.findViewById(R.id.rv_agenda);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
-//        DocumentReference documentReference = fStore.collection("users").document(userId);
-//        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-//                if (documentSnapshot.exists()) {
-//                    nama.setText(documentSnapshot.getString("fName"));
-//
-//                } else {
-//                    Log.d("tag", "onEvent: Document do not exists");
-//                }
-//            }
-//        });
+        DocumentReference documentReference = fStore.collection("users").document(userId);
+        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                if (documentSnapshot.exists()) {
+                    nama.setText(documentSnapshot.getString("fName"));
+
+                } else {
+                    Log.d("tag", "onEvent: Document do not exists");
+                }
+            }
+        });
 
         notif.setOnClickListener(new View.OnClickListener() {
             @Override
