@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#EFEDED">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/rlForgetPassword"
@@ -23,8 +22,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="Verifikasi OTP"
-            android:textColor="@color/purple_500"
+            android:text="Verifikasi Kode OTP"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
             android:textSize="@dimen/_14ssp"
             tools:ignore="MissingPrefix" />
 
@@ -48,7 +48,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
-            android:background="@color/white"
+            android:background="@drawable/edit_text_bg"
             android:gravity="start|center_vertical"
             android:hint="Masukan Kode OTP"
             android:inputType="phone"
@@ -108,11 +108,11 @@
             android:id="@+id/tvVerif"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
-            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
             android:layout_marginBottom="@dimen/_12sdp"
-            android:background="@color/purple_500"
+            android:background="@drawable/button_bg"
             android:gravity="center"
             android:text="Verifikasi"
             android:textColor="@color/white"
