@@ -121,7 +121,7 @@
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_marginStart="@dimen/_120sdp"
-                android:backgroundTintMode="screen"
+                android:background="@drawable/button_bg"
                 android:textColor="@color/black"
                 android:text="Bayar"
                 android:textAllCaps="false" />
