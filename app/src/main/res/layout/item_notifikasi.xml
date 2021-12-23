@@ -72,22 +72,15 @@
                 android:id="@+id/tv_waktu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="20"
                 android:drawablePadding="5dp"
                 android:padding="2dp"
-                android:text="09.00 - 11.00 WIB"
+                android:text="Waktu : 09.00 - 11.00 WIB"
                 android:textColor="@android:color/black"
                 android:textSize="10sp" />
 
-            <TextView
-                android:id="@+id/tv_tempat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="id"
-                android:textSize="10sp"
-                android:visibility="gone" />
+
             <TextView
                 android:id="@+id/tv_id"
                 android:layout_width="wrap_content"
