@@ -108,15 +108,15 @@
             android:textColor="@color/strock_gray"
             android:paddingStart="@dimen/_10sdp"
             android:paddingEnd="1dp"
-            android:editable="false"
+            android:inputType="none"
+            android:enabled="false"
             android:hint="Nomer HP"
             android:textSize="@dimen/_12ssp"
             android:textAlignment="viewStart"
-            android:inputType="phone"
             android:gravity="start|center_vertical"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
-            tools:ignore="MissingPrefix" />
+            tools:ignore="MissingPrefix,TextFields" />
 
         <TextView
             android:id="@+id/saveProfileInfo"

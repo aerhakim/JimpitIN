@@ -154,7 +154,8 @@ public class ProfileFragment extends Fragment {
                         .setPositiveButton("Ubah",  new MaterialDialog.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int which) {
-                                startActivity(new Intent(getActivity(), UbahPasswordActivity.class));
+                                Intent mIntent = new Intent(getActivity().getApplicationContext(), UbahPasswordActivity.class);
+                                startActivity(mIntent);
                                 getActivity().finish();
                                 dialogInterface.dismiss();
                             }
