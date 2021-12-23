@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -26,6 +25,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import dev.shreyaspatil.MaterialDialog.MaterialDialog;
+import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 import io.github.aerhakim.lombamobile.R;
 import io.github.aerhakim.lombamobile.api.Config;
 import io.github.aerhakim.lombamobile.fragment.HomeFragment;
@@ -158,5 +158,34 @@ public class MainActivity extends AppCompatActivity {
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        MaterialDialog mDialog = new MaterialDialog.Builder(this)
+                .setTitle("Ingin Keluar?")
+                .setMessage("Apakah Anda ingin keluar dari Jimpit.in?")
+                .setCancelable(false)
+                .setPositiveButton("Keluar", R.drawable.ic_baseline_exit_to_app_24, new MaterialDialog.OnClickListener() {
+
+
+                    @Override
+                    public void onClick(dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface dialogInterface, int which) {
+                        MainActivity.super.onBackPressed();
+                    }
+                })
+                .setNegativeButton("Batal", R.drawable.ic_baseline_close_24, new MaterialDialog.OnClickListener() {
+
+
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        dialogInterface.dismiss();
+                    }
+                })
+                .build();
+        // Show Dialog
+        mDialog.show();
+
     }
 }

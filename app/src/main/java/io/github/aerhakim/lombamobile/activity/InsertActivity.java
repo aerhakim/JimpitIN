@@ -138,6 +138,8 @@ public class InsertActivity extends AppCompatActivity {
                 public void onResponse(Call<PostPutDelHeros> call, Response<PostPutDelHeros> response) {
                     Intent mIntent = new Intent(InsertActivity.this, MainActivity.class);
                     startActivity(mIntent);
+                    finish();
+                    finishAffinity();
                 }
 
                 @Override
@@ -172,5 +174,11 @@ public class InsertActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
+    }
 }

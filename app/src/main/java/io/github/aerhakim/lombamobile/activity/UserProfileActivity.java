@@ -81,6 +81,8 @@ public class UserProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mIntent);
+                finish();
+                finishAffinity();
             }
         });
         DocumentReference documentReference = fStore.collection("users").document(userId);
@@ -157,6 +159,8 @@ public class UserProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), MainActivity.class);
                 startActivity(i);
+                finish();
+                finishAffinity();
 
             }
         });
@@ -246,5 +250,12 @@ public class UserProfileActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
     }
 }

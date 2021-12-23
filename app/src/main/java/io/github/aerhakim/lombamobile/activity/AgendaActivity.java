@@ -47,6 +47,8 @@ public class AgendaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mIntent);
+                finish();
+                finishAffinity();
             }
         });
     }
@@ -91,6 +93,14 @@ public class AgendaActivity extends AppCompatActivity {
     public void onPause() {
         shimmerFrameLayout.stopShimmer();
         super.onPause();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
     }
 
 }

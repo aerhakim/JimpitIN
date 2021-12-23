@@ -22,6 +22,8 @@ public class ForgetPasswordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                finish();
+                finishAffinity();
             }
         });
         ImageView back = findViewById(R.id.ivBack);
@@ -30,7 +32,15 @@ public class ForgetPasswordActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent mIntent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(mIntent);
+                finish();
+                finishAffinity();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(mIntent);
+        finish();
     }
 }

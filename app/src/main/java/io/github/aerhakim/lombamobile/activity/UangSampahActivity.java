@@ -55,6 +55,8 @@ public class UangSampahActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mIntent);
+                finish();
+                finishAffinity();
             }
         });
         Button button = findViewById(R.id.btnBayar);
@@ -74,6 +76,8 @@ public class UangSampahActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent mIntent = new Intent(UangSampahActivity.this, InsertActivity.class);
                         startActivity(mIntent);
+                        finish();
+                        finishAffinity();
                     }
                 });
                 bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
@@ -118,40 +122,11 @@ public class UangSampahActivity extends AppCompatActivity {
         });
 
     }
-
-//    private void showBottomSheetDialog() {
-//        View view = getLayoutInflater().inflate(R.layout.sheet_bayar, null);
-//
-//        if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-//            sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-//        }
-//
-//        (view.findViewById(R.id.bt_close)).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                sheetDialog.dismiss();
-//            }
-//        });
-//
-//        (view.findViewById(R.id.bt_subscribe)).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(getApplicationContext(), "Makasih ya sudah subscribe", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//        sheetDialog = new BottomSheetDialog(this);
-//        sheetDialog.setContentView(view);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            sheetDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//        }
-//
-//        sheetDialog.show();
-//        sheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-//            @Override
-//            public void onDismiss(DialogInterface dialog) {
-//                sheetDialog = null;
-//            }
-//        });
-//    }
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
+    }
 }

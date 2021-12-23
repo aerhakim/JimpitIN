@@ -84,6 +84,8 @@ public class OtpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            finish();
+                            finishAffinity();
                         }else {
                         }
                     }
@@ -124,6 +126,13 @@ public class OtpActivity extends AppCompatActivity {
         }else {
             Toast.makeText(this, "Please enter a valid number", Toast.LENGTH_SHORT).show();
         }
+    }
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), SignUpActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
     }
 
 }

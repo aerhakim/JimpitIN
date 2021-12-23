@@ -45,6 +45,8 @@ public class NotifikasiActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mIntent);
+                finish();
+                finishAffinity();
             }
         });
     }
@@ -79,5 +81,13 @@ public class NotifikasiActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
     }
 }

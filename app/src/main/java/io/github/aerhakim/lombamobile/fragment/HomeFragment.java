@@ -196,4 +196,6 @@ public class HomeFragment extends Fragment {
         shimmerFrameLayout.stopShimmer();
         super.onPause();
     }
+
+
 }

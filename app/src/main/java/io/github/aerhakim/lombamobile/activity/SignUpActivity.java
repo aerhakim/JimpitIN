@@ -93,12 +93,16 @@ public class SignUpActivity extends AppCompatActivity {
                 Intent mIntent = new Intent(SignUpActivity.this, OtpActivity.class);
                 mIntent.putExtra("nohp",NoHP);
                 startActivity(mIntent);
+                finish();
+                finishAffinity();
             }
         });
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                finish();
+                finishAffinity();
             }
         });
         cekKoneksi();
@@ -140,5 +144,11 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
+    }
 }

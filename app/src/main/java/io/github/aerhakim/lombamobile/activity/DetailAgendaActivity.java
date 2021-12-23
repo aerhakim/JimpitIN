@@ -34,6 +34,8 @@ public class DetailAgendaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mIntent);
+                finish();
+                finishAffinity();
             }
         });
         Intent mIntent = getIntent();
@@ -47,5 +49,13 @@ public class DetailAgendaActivity extends AppCompatActivity {
                 .load(Config.IMAGES_URL + mIntent.getStringExtra("gambar"))
                 .apply(new RequestOptions().override(700, 400))
                 .into(gambar);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mIntent);
+        finish();
+        finishAffinity();
     }
 }

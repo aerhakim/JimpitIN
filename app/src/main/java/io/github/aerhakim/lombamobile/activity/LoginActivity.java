@@ -9,6 +9,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -84,6 +85,8 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            finish();
+                            finishAffinity();
                             Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
                         }else {
                             Toast.makeText(LoginActivity.this, "Password Salah", Toast.LENGTH_SHORT).show();
@@ -99,6 +102,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),SignUpActivity.class));
+                finish();
+                finishAffinity();
             }
         });
 
@@ -106,6 +111,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),ForgetPasswordActivity.class));
+                finish();
+                finishAffinity();
             }
         });
         cekKoneksi();
@@ -146,6 +153,11 @@ public class LoginActivity extends AppCompatActivity {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        LoginActivity.super.onBackPressed();
     }
 
 }
