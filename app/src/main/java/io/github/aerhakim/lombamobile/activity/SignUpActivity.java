@@ -56,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
         edNIK      = findViewById(R.id.edNIK);
         edPassword      = findViewById(R.id.edPassword);
         mLogin      = findViewById(R.id.tvLogin);
-        mRegister      = findViewById(R.id.tvSignup);
+        mRegister      = findViewById(R.id.tvSignUp);
         ccp = findViewById(R.id.ccp);
 
 

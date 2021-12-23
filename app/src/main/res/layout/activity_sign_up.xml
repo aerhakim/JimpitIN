@@ -8,175 +8,204 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <ImageView
-
-        android:layout_width="match_parent"
-        android:scaleType="fitXY"
-        android:layout_height="match_parent"/>
-
-    <RelativeLayout
-        android:id="@+id/rlRegistration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/ivLogin"
-            android:layout_width="@dimen/_90sdp"
-            android:layout_height="@dimen/_90sdp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:src="@color/purple_200" />
-
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ivLogin"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:text="Sign Up"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/_15ssp"
-            tools:ignore="MissingPrefix" />
-
-        <EditText
-            android:id="@+id/edFullName"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_below="@id/tvTitle"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:background="@drawable/edit_text_bg"
-            android:gravity="start|center_vertical"
-            android:hint="Nama Lengkap"
-            android:imeOptions="actionNext"
-            android:inputType="textPersonName"
-            android:paddingLeft="@dimen/_10sdp"
-            android:paddingRight="@dimen/_10sdp"
-            android:textAlignment="viewStart"
-            android:textSize="@dimen/_10ssp"
-            tools:ignore="MissingPrefix" />
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_bg" />
 
-        <EditText
-            android:id="@+id/edNIK"
+        <RelativeLayout
+            android:id="@+id/rlRegistration"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_below="@id/edFullName"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:background="@drawable/edit_text_bg"
-            android:gravity="start|center_vertical"
-            android:hint="Masukan NIK"
-            android:imeOptions="actionNext"
-            android:inputType="number"
-            android:paddingLeft="@dimen/_10sdp"
-            android:paddingRight="@dimen/_10sdp"
-            android:textAlignment="viewStart"
-            android:textSize="@dimen/_10ssp"
-            tools:ignore="MissingPrefix" />
+            android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/lnemail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:background="@color/white"
-            android:layout_below="@id/edNIK"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:orientation="horizontal">
-            <com.hbb20.CountryCodePicker
-                android:id="@+id/ccp"
+            <ImageView
+                android:id="@+id/ivLogin"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:src="@mipmap/ic_icon" />
+
+            <TextView
+                android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:ccp_autoDetectCountry="true" />
+                android:layout_below="@id/ivLogin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Sign Up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                tools:ignore="MissingPrefix" />
 
             <EditText
-                android:id="@+id/edNoHP"
+                android:id="@+id/edFullName"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_white"
                 android:gravity="start|center_vertical"
-                android:hint="Masukan nomer HP"
-                android:background="@drawable/edit_text_bg"
+                android:hint="Nama Lengkap"
                 android:imeOptions="actionNext"
-                android:paddingLeft="10dp"
-                android:inputType="number"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
                 android:singleLine="true"
                 android:textAlignment="viewStart"
                 android:textSize="@dimen/_10ssp"
                 tools:ignore="MissingPrefix" />
-        </LinearLayout>
 
-
-        <EditText
-            android:id="@+id/edPassword"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_below="@id/lnemail"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:background="@drawable/edit_text_bg"
-            android:gravity="start|center_vertical"
-            android:hint="Masukan kata sandi"
-            android:imeOptions="actionNext"
-            android:inputType="textPassword"
-            android:paddingLeft="@dimen/_10sdp"
-            android:paddingRight="@dimen/_10sdp"
-            android:textAlignment="viewStart"
-            android:textSize="@dimen/_10ssp"
-            tools:ignore="MissingPrefix" />
-
-
-        <TextView
-            android:id="@+id/tvSignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edPassword"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:background="@drawable/button_bg"
-            android:gravity="center_horizontal"
-            android:onClick="onClick"
-            android:padding="@dimen/_10sdp"
-            android:text="Sign Up"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"
-            tools:ignore="MissingPrefix" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:text="Sudah memiliki akun?"
-                android:textSize="@dimen/_11ssp"
-                tools:ignore="MissingPrefix" />
-
-            <TextView
-                android:id="@+id/tvLogin"
+            <EditText
+                android:id="@+id/edNIK"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_below="@+id/edFullName"
+                android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:onClick="onClick"
-                android:text="Login"
-                android:gravity="center_horizontal"
-                android:textColor="@color/purple_200"
-                android:textSize="@dimen/_11ssp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_white"
+                android:gravity="start|center_vertical"
+                android:hint="NIK"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/_10ssp"
                 tools:ignore="MissingPrefix" />
-        </LinearLayout>
 
 
-    </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/lnemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edNIK"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white"
+                    android:gravity="center_vertical"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_contentColor="@color/gray"
+                    app:ccp_showFlag="false"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textSize="@dimen/_11ssp" />
+
+                <EditText
+                    android:id="@+id/edNoHP"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/bg_white"
+                    android:gravity="start|center_vertical"
+                    android:hint="Nomer HP"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_10ssp"
+                    tools:ignore="MissingPrefix" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnemail"
+                android:layout_gravity="center|end"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/black">
+
+                <EditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@id/edNoHP"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/bg_white"
+                    android:gravity="start|center_vertical"
+                    android:hint="Masukan Password"
+                    android:imeOptions="actionGo"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_10ssp"
+                    tools:ignore="MissingPrefix" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPass"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_editfield"
+                android:backgroundTint="@color/black"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:padding="@dimen/_10sdp"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Sudah memiliki akun?"
+                    android:textSize="@dimen/_11ssp"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center_horizontal"
+                    android:onClick="onClick"
+                    android:text="Sign In"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

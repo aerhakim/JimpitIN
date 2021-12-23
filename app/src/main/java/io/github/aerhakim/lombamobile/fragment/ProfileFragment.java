@@ -36,14 +36,17 @@ import dev.shreyaspatil.MaterialDialog.MaterialDialog;
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 import dev.shreyaspatil.MaterialDialog.model.TextAlignment;
 import io.github.aerhakim.lombamobile.R;
+import io.github.aerhakim.lombamobile.activity.AgendaActivity;
 import io.github.aerhakim.lombamobile.activity.LoginActivity;
 import io.github.aerhakim.lombamobile.activity.MainActivity;
+import io.github.aerhakim.lombamobile.activity.UserProfileActivity;
 
 public class ProfileFragment extends Fragment {
     public static Context context;
     StorageReference storageReference;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    GridLayout editprofile;
     String userId;
     CardView editpassword, logout;
     FirebaseUser user;
@@ -58,6 +61,7 @@ public class ProfileFragment extends Fragment {
         profileImage = view.findViewById(R.id.profileImageView);
         fAuth = FirebaseAuth.getInstance();
         editpassword = view.findViewById(R.id.cv2);
+        editprofile = view.findViewById(R.id.editprofile);
         logout = view.findViewById(R.id.logout);
         fStore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
@@ -74,7 +78,13 @@ public class ProfileFragment extends Fragment {
 
             }
         });
-
+        editprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(view.getContext(), UserProfileActivity.class);
+                view.getContext().startActivity(mIntent);
+            }
+        });
         editpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

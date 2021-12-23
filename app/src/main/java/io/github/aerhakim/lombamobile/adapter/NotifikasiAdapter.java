@@ -57,8 +57,8 @@ public class NotifikasiAdapter extends RecyclerView.Adapter<NotifikasiAdapter.Vi
         holder.notifikasiWaktu.setText(notifikasiList.get(position).getWaktu());
         holder.notifikasiId.setText(notifikasiList.get(position).getId());
         String anjayani = notifikasiList.get(position).getDetail() + "\n\nTempat : " + notifikasiList.get(position).getTempat()
-                + "\n Tanggal : " + notifikasiList.get(position).getTanggal()
-                + "\n Waktu : " + notifikasiList.get(position).getWaktu();
+                + "\nTanggal : " + notifikasiList.get(position).getTanggal()
+                + "\nWaktu : " + notifikasiList.get(position).getWaktu();
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

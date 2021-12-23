@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.LombaMobile" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.main" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -23,7 +23,7 @@
         <item name="android:windowDisablePreview">true</item>
 
     </style>
-    <style name="Theme.LombaMobile.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="Theme.LombaMobile.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.main.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.main.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

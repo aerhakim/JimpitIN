@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         edNoHP = findViewById(R.id.edNoHP);
-        edKataSandi = findViewById(R.id.edKataSandi);
+        edKataSandi = findViewById(R.id.edPassword);
         fAuth = FirebaseAuth.getInstance();
         tvLogin = findViewById(R.id.tvLogin);
         tvSignup = findViewById(R.id.tvSignup);
