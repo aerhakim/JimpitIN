@@ -4,7 +4,9 @@ package io.github.aerhakim.lombamobile.api;
 
 
 import io.github.aerhakim.lombamobile.model.GetAgenda;
+import io.github.aerhakim.lombamobile.model.GetJimpitan;
 import io.github.aerhakim.lombamobile.model.GetNotifikasi;
+import io.github.aerhakim.lombamobile.model.GetSampah;
 import io.github.aerhakim.lombamobile.model.GetToken;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -19,6 +21,12 @@ public interface Api {
 
     @GET("notifikasi")
     Call<GetNotifikasi> notifikasi();
+
+    @GET("sampah")
+
+    Call<GetSampah> sampah();
+    @GET("jimpitan")
+    Call<GetJimpitan> jimpitan();
 
     @FormUrlEncoded
     @POST("application/controllers/token.php")

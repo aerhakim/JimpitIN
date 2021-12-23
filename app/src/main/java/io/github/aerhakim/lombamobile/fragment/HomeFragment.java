@@ -80,7 +80,6 @@ public class HomeFragment extends Fragment {
         fStore = FirebaseFirestore.getInstance();
         userId = fAuth.getCurrentUser().getUid();
         user = fAuth.getCurrentUser();
-
         recyclerView = view.findViewById(R.id.rv_agenda);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));

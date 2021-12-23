@@ -82,34 +82,34 @@
 
             tools:ignore="MissingPrefix" />
 
+
         <EditText
+            android:id="@+id/profileEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
             android:background="@drawable/bg_onlycorner_gary"
-            android:id="@+id/profileEmailAddress"
-            android:textColor="@color/strock_gray"
+            android:gravity="start|center_vertical"
+            android:hint="NIK"
             android:paddingStart="@dimen/_10sdp"
             android:paddingEnd="1dp"
-            android:hint="NIK"
-            android:editable="false"
-            android:textSize="@dimen/_12ssp"
             android:textAlignment="viewStart"
-            android:gravity="start|center_vertical"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_7sdp"
-            android:layout_marginBottom="@dimen/_7sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
             tools:ignore="MissingPrefix" />
-
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:background="@drawable/bg_onlycorner_gary"
             android:id="@+id/profilePhoneNo"
-            android:textColor="@color/black"
+            android:textColor="@color/strock_gray"
             android:paddingStart="@dimen/_10sdp"
             android:paddingEnd="1dp"
+            android:editable="false"
             android:hint="Nomer HP"
             android:textSize="@dimen/_12ssp"
             android:textAlignment="viewStart"

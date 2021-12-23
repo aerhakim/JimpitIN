@@ -7,17 +7,20 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.provider.Settings;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -26,7 +29,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
@@ -46,8 +53,8 @@ public class ProfileFragment extends Fragment {
     StorageReference storageReference;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    TextView Nama, NOhp;
     GridLayout editprofile;
-    String userId;
     CardView editpassword, logout;
     FirebaseUser user;
     ImageView profileImage;
@@ -61,6 +68,8 @@ public class ProfileFragment extends Fragment {
         profileImage = view.findViewById(R.id.profileImageView);
         fAuth = FirebaseAuth.getInstance();
         editpassword = view.findViewById(R.id.cv2);
+        Nama = view.findViewById(R.id.tvnama);
+        NOhp = view.findViewById(R.id.tvnotelp);
         editprofile = view.findViewById(R.id.editprofile);
         logout = view.findViewById(R.id.logout);
         fStore = FirebaseFirestore.getInstance();
@@ -78,6 +87,21 @@ public class ProfileFragment extends Fragment {
 
             }
         });
+
+        DocumentReference documentReference = fStore.collection("users").document(fAuth.getCurrentUser().getUid());
+        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                if (documentSnapshot.exists()) {
+                    Nama.setText(documentSnapshot.getString("fName"));
+                    NOhp.setText(documentSnapshot.getString("phone"));
+
+                } else {
+                    Log.d("tag", "onEvent: Document do not exists");
+                }
+            }
+        });
+
         editprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

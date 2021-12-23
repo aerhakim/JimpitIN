@@ -8,23 +8,11 @@
 
     <ImageView
         android:id="@+id/iv_icon"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:src="@mipmap/ic_icon" />
+        android:src="@drawable/logofull" />
 
-
-    <TextView
-        android:id="@+id/tv_nama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_icon"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="Desa Suka Makmur"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_20sdp"
-        android:textStyle="bold" />
 
     <ProgressBar
         android:layout_width="@dimen/_30sdp"

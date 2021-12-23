@@ -37,15 +37,14 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         //hooks
         icon =  findViewById(R.id.iv_icon);
-        nama = findViewById(R.id.tv_nama);
 
         //Animasi
         sideAnim = AnimationUtils.loadAnimation(this, R.anim.side_anim);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_anim);
 
         //Setting Elemen Animasi
-        icon.setAnimation(sideAnim);
-        nama.setAnimation(bottomAnim);
+//        icon.setAnimation(sideAnim);
+//        nama.setAnimation(bottomAnim);
 
         new Handler().postDelayed(() -> {
 
