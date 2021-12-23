@@ -16,6 +16,9 @@
         android:theme="@style/Theme.LombaMobile"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.BayarActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.UserProfileActivity"
             android:exported="false" />
         <activity
@@ -32,16 +35,15 @@
             android:exported="false" />
         <activity
             android:name=".activity.NotifikasiActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.main" />
         <activity
             android:name=".activity.ForgetPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@style/Theme.main"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"
+            android:theme="@style/Theme.main"></activity>
         <activity
             android:name=".activity.OtpActivity"
             android:exported="false" />

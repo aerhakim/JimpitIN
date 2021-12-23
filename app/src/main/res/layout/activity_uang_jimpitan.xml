@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.UangJimpitanActivity">
+    tools:context=".activity.UangSampahActivity">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,41 +107,55 @@
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_jimpitan"
             android:layout_width="match_parent"
-            android:layout_height="100dp"/>
+            android:layout_height="wrap_content"/>
+            </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_8sdp"
             android:text="Jumlah"
             android:textColor="@color/black"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginStart="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_8sdp"/>
+            android:textSize="@dimen/_14sdp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp 6000"
-                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:layout_weight="1"
-                android:textSize="@dimen/_18sdp"
+                android:text="Rp 10.000"
                 android:textColor="@color/black"
-                android:layout_marginStart="@dimen/_15sdp"/>
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btnBayar"
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:backgroundTint="@color/black"
-                android:textColor="@color/white"
                 android:text="Bayar"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
         </LinearLayout>
-
-
     </LinearLayout>
 </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -5,11 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -50,8 +53,30 @@ public class UangSampahActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showBottomSheetDialog();
-
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        UangSampahActivity.this,R.style.BottomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getApplicationContext())
+                        .inflate(
+                                R.layout.sheet_bayar,
+                                (LinearLayout)findViewById(R.id.bottomsheet)
+                        );
+                bottomSheetView.findViewById(R.id.bayar).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent mIntent = new Intent(UangSampahActivity.this, BayarActivity.class);
+                        startActivity(mIntent);
+                    }
+                });
+                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        bottomSheetDialog.setContentView(bottomSheetView);
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
             }
         });
     }
@@ -86,39 +111,39 @@ public class UangSampahActivity extends AppCompatActivity {
 
     }
 
-    private void showBottomSheetDialog() {
-        View view = getLayoutInflater().inflate(R.layout.sheet_bayar, null);
-
-        if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-            sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-        }
-
-        (view.findViewById(R.id.bt_close)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sheetDialog.dismiss();
-            }
-        });
-
-        (view.findViewById(R.id.bt_subscribe)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Makasih ya sudah subscribe", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        sheetDialog = new BottomSheetDialog(this);
-        sheetDialog.setContentView(view);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            sheetDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        }
-
-        sheetDialog.show();
-        sheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                sheetDialog = null;
-            }
-        });
-    }
+//    private void showBottomSheetDialog() {
+//        View view = getLayoutInflater().inflate(R.layout.sheet_bayar, null);
+//
+//        if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+//            sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+//        }
+//
+//        (view.findViewById(R.id.bt_close)).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                sheetDialog.dismiss();
+//            }
+//        });
+//
+//        (view.findViewById(R.id.bt_subscribe)).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getApplicationContext(), "Makasih ya sudah subscribe", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//        sheetDialog = new BottomSheetDialog(this);
+//        sheetDialog.setContentView(view);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            sheetDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        }
+//
+//        sheetDialog.show();
+//        sheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+//            @Override
+//            public void onDismiss(DialogInterface dialog) {
+//                sheetDialog = null;
+//            }
+//        });
+//    }
 }
