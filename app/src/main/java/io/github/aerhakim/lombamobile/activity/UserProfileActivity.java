@@ -30,7 +30,10 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -38,6 +41,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.annotation.Nullable;
 
 import io.github.aerhakim.lombamobile.R;
 
@@ -52,16 +57,12 @@ public class UserProfileActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     FirebaseUser user;
     StorageReference storageReference;
+    String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
-
-        Intent data = getIntent();
-        final String fullName = data.getStringExtra("fullName");
-        String email = data.getStringExtra("email");
-        String phone = data.getStringExtra("phone");
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -73,7 +74,22 @@ public class UserProfileActivity extends AppCompatActivity {
         profilePhone = findViewById(R.id.profilePhoneNo);
         profileImageView = findViewById(R.id.profileImageView);
         saveBtn = findViewById(R.id.saveProfileInfo);
+        userId = fAuth.getCurrentUser().getUid();
 
+        DocumentReference documentReference = fStore.collection("users").document(userId);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                if(documentSnapshot.exists()){
+                    profilePhone.setText(documentSnapshot.getString("phone"));
+                    profileFullName.setText(documentSnapshot.getString("fName"));
+                    profileEmail.setText(documentSnapshot.getString("NIK"));
+
+                }else {
+                    Log.d("tag", "onEvent: Document do not exists");
+                }
+            }
+        });
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -98,13 +114,13 @@ public class UserProfileActivity extends AppCompatActivity {
                     return;
                 }
 
-                final String email = profileEmail.getText().toString();
+                final String email = "arhakim.info@gmail.com";
                 user.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         DocumentReference docRef = fStore.collection("users").document(user.getUid());
                         Map<String,Object> edited = new HashMap<>();
-                        edited.put("email",email);
+                        edited.put("NIK",profileEmail.getText().toString());
                         edited.put("fName",profileFullName.getText().toString());
                         edited.put("phone",profilePhone.getText().toString());
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -127,12 +143,6 @@ public class UserProfileActivity extends AppCompatActivity {
 
             }
         });
-
-        profileEmail.setText(email);
-        profileFullName.setText(fullName);
-        profilePhone.setText(phone);
-
-        Log.d(TAG, "onCreate: " + fullName + " " + email + " " + phone);
 
         ImageView ivBack=findViewById(R.id.ivBack);
         ivBack.setOnClickListener(new View.OnClickListener() {
