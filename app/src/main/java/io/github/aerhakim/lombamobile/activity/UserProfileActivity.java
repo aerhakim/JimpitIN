@@ -75,7 +75,14 @@ public class UserProfileActivity extends AppCompatActivity {
         profileImageView = findViewById(R.id.profileImageView);
         saveBtn = findViewById(R.id.saveProfileInfo);
         userId = fAuth.getCurrentUser().getUid();
-
+        ImageView back = findViewById(R.id.ivBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mIntent);
+            }
+        });
         DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override

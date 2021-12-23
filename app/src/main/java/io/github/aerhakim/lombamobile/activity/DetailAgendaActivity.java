@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,7 +28,14 @@ public class DetailAgendaActivity extends AppCompatActivity {
         tanggal = findViewById(R.id.tvtTanggal);
         waktu = findViewById(R.id.tvWaktu);
         tempat = findViewById(R.id.tvTempat);
-
+        ImageView back = findViewById(R.id.ivBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mIntent);
+            }
+        });
         Intent mIntent = getIntent();
         judul.setText(mIntent.getStringExtra("judul"));
         deskripsi.setText(mIntent.getStringExtra("deskripsi"));

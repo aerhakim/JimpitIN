@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="23 Desember 2021"
+                    android:text="23 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -160,7 +160,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="22 Desember 2021"
+                    android:text="22 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -226,7 +226,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="22 Desember 2021"
+                    android:text="22 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -292,7 +292,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="21 Desember 2021"
+                    android:text="21 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -358,7 +358,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20 Desember 2021"
+                    android:text="20 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -424,7 +424,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="19 Desember 2021"
+                    android:text="19 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -490,7 +490,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="19 Desember 2021"
+                    android:text="19 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -556,7 +556,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="18 Desember 2021"
+                    android:text="18 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -622,7 +622,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="17 Desember 2021"
+                    android:text="17 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />
@@ -688,7 +688,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="16 Desember 2021"
+                    android:text="16 Juli 2021"
                     android:layout_marginStart="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_24sdp"
                     android:textSize="12sp" />

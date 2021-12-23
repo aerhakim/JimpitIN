@@ -60,9 +60,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String email = "arhakim.info@gmail.com";
-                String password = "12345678";
                 String nohp = edNoHP.getText().toString().trim();;
-                String sandi = edKataSandi.getText().toString().trim();;
+                String password = edKataSandi.getText().toString().trim();;
 
 
                 if(TextUtils.isEmpty(nohp)){
@@ -70,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                if(TextUtils.isEmpty(sandi)){
+                if(TextUtils.isEmpty(password)){
                     edKataSandi.setError("Kata sandi wajib diisi!");
                     return;
                 }
@@ -85,7 +84,9 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
                         }else {
+                            Toast.makeText(LoginActivity.this, "Password Salah", Toast.LENGTH_SHORT).show();
                         }
 
                     }

@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/rlEditProfile"
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
 
@@ -35,8 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/rlEditProfile"
-        >
+        android:layout_below="@id/header_title">
         <RelativeLayout
             android:layout_width="@dimen/_95sdp"
             android:layout_height="@dimen/_95sdp"

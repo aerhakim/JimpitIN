@@ -9,6 +9,7 @@
         android:id="@+id/myimage"
         android:layout_width="match_parent"
         android:layout_height="210dp"
+        android:scaleType="fitXY"
         android:contentDescription="@string/app_name"
         android:src="@drawable/image1"
         app:riv_corner_radius="20dp" />

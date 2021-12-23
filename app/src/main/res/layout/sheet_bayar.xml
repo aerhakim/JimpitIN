@@ -78,7 +78,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_margin="7dp"
-                android:drawableLeft="@drawable/gopay"
+                android:drawableLeft="@drawable/ic_gopay"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
                 android:text="GO-PAY" />

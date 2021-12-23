@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -48,7 +49,14 @@ public class UangSampahActivity extends AppCompatActivity {
         getData();
         bottom_sheet = findViewById(R.id.bottom_sheet);
         sheetBehavior = BottomSheetBehavior.from(bottom_sheet);
-
+        ImageView back = findViewById(R.id.ivBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mIntent);
+            }
+        });
         Button button = findViewById(R.id.btnBayar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +72,7 @@ public class UangSampahActivity extends AppCompatActivity {
                 bottomSheetView.findViewById(R.id.bayar).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent mIntent = new Intent(UangSampahActivity.this, BayarActivity.class);
+                        Intent mIntent = new Intent(UangSampahActivity.this, InsertActivity.class);
                         startActivity(mIntent);
                     }
                 });

@@ -12,6 +12,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/bg_shimmer"
+        android:elevation="4dp"
         android:backgroundTint="@color/white"
         android:orientation="vertical">
 
@@ -83,6 +84,13 @@
 
             <TextView
                 android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:textSize="10sp"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tv_tempat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="id"

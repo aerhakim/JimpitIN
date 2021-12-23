@@ -46,6 +46,7 @@ import io.github.aerhakim.lombamobile.R;
 import io.github.aerhakim.lombamobile.activity.AgendaActivity;
 import io.github.aerhakim.lombamobile.activity.LoginActivity;
 import io.github.aerhakim.lombamobile.activity.MainActivity;
+import io.github.aerhakim.lombamobile.activity.UbahPasswordActivity;
 import io.github.aerhakim.lombamobile.activity.UserProfileActivity;
 
 public class ProfileFragment extends Fragment {
@@ -54,7 +55,7 @@ public class ProfileFragment extends Fragment {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     TextView Nama, NOhp;
-    GridLayout editprofile;
+    GridLayout editprofile, edabout;
     CardView editpassword, logout;
     FirebaseUser user;
     ImageView profileImage;
@@ -69,12 +70,43 @@ public class ProfileFragment extends Fragment {
         fAuth = FirebaseAuth.getInstance();
         editpassword = view.findViewById(R.id.cv2);
         Nama = view.findViewById(R.id.tvnama);
+        edabout = view.findViewById(R.id.about);
         NOhp = view.findViewById(R.id.tvnotelp);
         editprofile = view.findViewById(R.id.editprofile);
         logout = view.findViewById(R.id.logout);
         fStore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
+        edabout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                final MaterialDialog passwordResetDialog = new MaterialDialog.Builder((Activity) v.getContext())
+                        .setTitle("About Developer")
+//                        .setView(resetPassword)
+                        .setMessage("Silahkan mengunjungi repository project ini untuk melihat lebih detail mengenai project, credit, para developer dan informasi penting lainnya.", TextAlignment.START)
+                        .setCancelable(false)
+                        .setPositiveButton("Visit",  new MaterialDialog.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                String url = ("https://github.com/aerhakim/LombaMobile");
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .setNegativeButton("Batal",  new MaterialDialog.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .build();
+                // Show Dialog
+                passwordResetDialog.show();
+
+            }
+        });
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -117,19 +149,20 @@ public class ProfileFragment extends Fragment {
                 final MaterialDialog passwordResetDialog = new MaterialDialog.Builder((Activity) v.getContext())
                                     .setTitle("Ubah Kata Sandi")
 //                        .setView(resetPassword)
-                        .setMessage("Masukan Password Baru Dengan Jumlah Karakter >6!", TextAlignment.START)
+                        .setMessage("Ingin Mengubah Kata Sandi? Klik Button Ubah Untuk Menuju Halaman Ubah Kata Sandi!", TextAlignment.START)
                         .setCancelable(false)
                         .setPositiveButton("Ubah",  new MaterialDialog.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int which) {
-                                Toast.makeText(getActivity(), "Password Berhasil Diubah", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getActivity(), UbahPasswordActivity.class));
+                                getActivity().finish();
                                 dialogInterface.dismiss();
                             }
                         })
                         .setNegativeButton("Batal",  new MaterialDialog.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int which) {
-                                Toast.makeText(getActivity(), "Password Batal Diubah.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Password Batal Diubah!", Toast.LENGTH_SHORT).show();
                                 dialogInterface.dismiss();
                             }
                         })
