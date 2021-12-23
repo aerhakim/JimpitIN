@@ -45,7 +45,7 @@
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_notifikasi.xml" value="0.31203703703703706" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_on_boarding.xml" value="0.31203703703703706" />
-        <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_otp.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_otp.xml" value="0.33" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_splash_screen.xml" value="0.19479166666666667" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/activity_uang_jimpitan.xml" value="0.31203703703703706" />
@@ -54,11 +54,13 @@
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/cover_berita_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/cover_category_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/fragment_blank.xml" value="0.31203703703703706" />
-        <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/ic_icon_splash.xml" value="0.19479166666666667" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/item_heros.xml" value="0.31203703703703706" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/item_notifikasi.xml" value="0.31203703703703706" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/item_tagihan.xml" value="0.5" />
+        <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/sheet_bayar.xml" value="0.31203703703703706" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/shimmer_cover_berita_item.xml" value="0.31203703703703706" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/slider_layout.xml" value="0.31203703703703706" />
         <entry key="..\:/Users/user/Desktop/Portofolio/LombaMobile/app/src/main/res/layout/slides_layout.xml" value="0.31203703703703706" />
