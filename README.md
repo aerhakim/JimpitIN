@@ -1,6 +1,6 @@
 # Jimpit.in
 
-### Credit
+## Credit
 [Communication vector created by freepik](https://www.freepik.com/free-photos-vectors/communication)
 
 
