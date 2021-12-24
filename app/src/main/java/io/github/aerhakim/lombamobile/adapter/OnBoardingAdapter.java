@@ -21,22 +21,22 @@ public class OnBoardingAdapter extends PagerAdapter {
         this.context = context;
     }
     int images[] = {
-            R.drawable.icon3,
-            R.drawable.icon3,
-            R.drawable.icon3,
-            R.drawable.icon3,
+            R.drawable.ob1,
+            R.drawable.ob3,
+            R.drawable.ob2,
+            R.drawable.ob4,
     };
     int headings[] = {
-            R.string.hello_blank_fragment,
-            R.string.hello_blank_fragment,
-            R.string.hello_blank_fragment,
-            R.string.hello_blank_fragment,
+            R.string.judul1,
+            R.string.judul3,
+            R.string.judul2,
+            R.string.judul4,
     };
     int descs[] = {
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
+            R.string.detail1,
+            R.string.detail3,
+            R.string.detail2,
+            R.string.detail4,
     };
 
     @Override

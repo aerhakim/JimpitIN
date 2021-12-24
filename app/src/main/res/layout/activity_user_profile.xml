@@ -34,20 +34,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/header_title">
+        android:layout_below="@id/header_title"
+        android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="@dimen/_95sdp"
             android:layout_height="@dimen/_95sdp"
-            android:layout_marginTop="@dimen/_45sdp"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_45sdp">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/profileImageView"
                 android:layout_width="@dimen/_90sdp"
                 android:layout_height="@dimen/_90sdp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/anna"
+                android:src="@drawable/ic_profile"
                 app:riv_oval="true" />
 
             <ImageView
@@ -64,20 +65,20 @@
         </RelativeLayout>
 
         <EditText
+            android:id="@+id/profileFullName"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:background="@drawable/bg_onlycorner_gary"
-            android:id="@+id/profileFullName"
-            android:textColor="@color/black"
+            android:gravity="start|center_vertical"
+            android:hint="Nama Panjang"
             android:paddingStart="@dimen/_10sdp"
             android:paddingEnd="1dp"
-            android:hint="Nama Panjang"
-            android:textSize="@dimen/_12ssp"
             android:textAlignment="viewStart"
-            android:gravity="start|center_vertical"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
 
             tools:ignore="MissingPrefix" />
 
@@ -101,21 +102,21 @@
             tools:ignore="MissingPrefix" />
 
         <EditText
+            android:id="@+id/profilePhoneNo"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
-            android:background="@drawable/bg_onlycorner_gary"
-            android:id="@+id/profilePhoneNo"
-            android:textColor="@color/strock_gray"
-            android:paddingStart="@dimen/_10sdp"
-            android:paddingEnd="1dp"
-            android:inputType="none"
-            android:enabled="false"
-            android:hint="Nomer HP"
-            android:textSize="@dimen/_12ssp"
-            android:textAlignment="viewStart"
-            android:gravity="start|center_vertical"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/bg_onlycorner_gary"
+            android:enabled="false"
+            android:gravity="start|center_vertical"
+            android:hint="Nomer HP"
+            android:inputType="none"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="1dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/strock_gray"
+            android:textSize="@dimen/_12ssp"
             tools:ignore="MissingPrefix,TextFields" />
 
         <TextView

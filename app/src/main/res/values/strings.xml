@@ -2,4 +2,13 @@
     <string name="app_name">Desa Suka Makmur</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="judul1">Hay, Sudah New Normal Nih!</string>
+    <string name="judul3">Masalah Baru, Solusi Baru</string>
+    <string name="judul2">Bayar Uang Desa Makin Gampang</string>
+    <string name="judul4">Mulai Aja Dulu!</string>
+
+    <string name="detail1">Dengan merebaknya virus COVID19, kegiatan diluar rumah sangat dibatasi dan harus selalu menggunakan masker.</string>
+    <string name="detail2">Kami menawarkan sebuah aplikasi mobile untuk memudahkan dalam membayar iuran. </string>
+    <string name="detail3">karena wabah COVID19 kita harus meminimalisir bertemu orang dan kebingungan membayar iuran.</string>
+    <string name="detail4">Dengan aplikasi ini membayar iuran menjadi lebih aman tanpa bertemu orang, transaksi jauh lebih mudah dan nyaman.</string>
 </resources>

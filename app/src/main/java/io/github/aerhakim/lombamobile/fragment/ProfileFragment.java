@@ -107,14 +107,46 @@ public class ProfileFragment extends Fragment {
 
             }
         });
+        GridLayout bantuan = view.findViewById(R.id.bantuan);
+        bantuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final MaterialDialog passwordResetDialog = new MaterialDialog.Builder((Activity) v.getContext())
+                        .setTitle("Punya Pertanyaan?")
+//                        .setView(resetPassword)
+                        .setMessage("Punya pertanyaan seputar aplikasi jimpit.in?\nSilahkan hubungi kami via Whatsapp dengan mengklik button Hubungi di bawah ini!", TextAlignment.START)
+                        .setCancelable(false)
+                        .setPositiveButton("Hubungi",  new MaterialDialog.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                String url = ("https://wa.me/6289517851144?text=Halo%2C%20Saya%20Punya%20Pertanyaan%20Seputar%20Jimpit.in%20App.%20%F0%9F%98%81");
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .setNegativeButton("Batal",  new MaterialDialog.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .build();
+                // Show Dialog
+                passwordResetDialog.show();
+
+            }
+        });
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 RequestOptions options = new RequestOptions()
                         .centerCrop()
-                        .placeholder(R.drawable.ava)
-                        .error(R.drawable.ava);
+                        .placeholder(R.drawable.ic_profile)
+                        .error(R.drawable.ic_profile);
                 Glide.with(getActivity().getApplicationContext()).load(uri).apply(options).into(profileImage);
 
             }

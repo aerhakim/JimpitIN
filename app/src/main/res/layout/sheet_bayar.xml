@@ -64,24 +64,24 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_margin="7dp"
-                android:drawableLeft="@drawable/dana"
+                android:drawableLeft="@drawable/ic_dana"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:text="DANA" />
+                android:textStyle="bold"
+                android:text=" DANA" />
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_margin="7dp"
-                android:drawableLeft="@drawable/livin"
+                android:drawableLeft="@drawable/ic_bri"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:text="M-Banking" />
+                android:textStyle="bold"
+                android:text=" M-Banking BRI" />
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_margin="7dp"
-                android:drawableLeft="@drawable/ic_gopay"
+                android:drawableLeft="@drawable/ic_gopey"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:text="GO-PAY" />
+                android:textStyle="bold"
+                android:text=" GO-PAY" />
 
         </LinearLayout>
 
