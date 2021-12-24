@@ -74,6 +74,16 @@ public class InsertActivity extends AppCompatActivity {
         // Definisi API
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
+        ImageView back = findViewById(R.id.ivBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mIntent);
+                finish();
+                finishAffinity();
+            }
+        });
         // Fungsi Tombol Pilih Galery
         btnGalery.setOnClickListener(new View.OnClickListener() {
             @Override
