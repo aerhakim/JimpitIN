@@ -22,7 +22,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 
 public interface Api {
-
+    @GET("pembayaran")
+    Call<GetHeros> getHeros();
     @GET("agenda")
     Call<GetAgenda> agenda();
 

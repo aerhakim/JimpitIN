@@ -135,12 +135,11 @@ public class UserProfileActivity extends AppCompatActivity {
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(UserProfileActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 finish();
                             }
                         });
-                        Toast.makeText(UserProfileActivity.this, "Email is changed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UserProfileActivity.this, "Perubahan Berhasil Disimpan", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

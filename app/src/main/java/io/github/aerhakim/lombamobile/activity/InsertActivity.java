@@ -39,8 +39,8 @@ import retrofit2.Response;
 public class InsertActivity extends AppCompatActivity {
 
     EditText edtName, edtDescription;
-    Button btnGalery, btSubmit;
-    ImageView imgHolder;
+    Button btSubmit;
+    ImageView imgHolder, btnGalery;
 
     private String mediaPath;
     private String postPath;
@@ -68,7 +68,7 @@ public class InsertActivity extends AppCompatActivity {
         edtName = (EditText) findViewById(R.id.edt_name);
         edtDescription = (EditText) findViewById(R.id.edt_description);
         imgHolder = (ImageView) findViewById(R.id.imgHolder);
-        btnGalery = (Button) findViewById(R.id.btn_galery);
+        btnGalery = (ImageView) findViewById(R.id.tambah);
         btSubmit = (Button) findViewById(R.id.btn_submit);
 
         // Definisi API
@@ -132,7 +132,7 @@ public class InsertActivity extends AppCompatActivity {
             RequestBody reqBody = RequestBody.create(MediaType.parse("multipart/form-file"), imagefile);
             MultipartBody.Part partImage = MultipartBody.Part.createFormData("image", imagefile.getName(), reqBody);
 
-            Call<PostPutDelHeros> postHerosCall = mApiInterface.postHeros(partImage, RequestBody.create(MediaType.parse("text/plain"), edtName.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), edtDescription.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), date), RequestBody.create(MediaType.parse("text/plain"), INSERT_FLAG));
+            Call<PostPutDelHeros> postHerosCall = mApiInterface.postHeros(partImage, RequestBody.create(MediaType.parse("text/plain"), "Rp " + edtName.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), edtDescription.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), date), RequestBody.create(MediaType.parse("text/plain"), INSERT_FLAG));
             postHerosCall.enqueue(new Callback<PostPutDelHeros>() {
                 @Override
                 public void onResponse(Call<PostPutDelHeros> call, Response<PostPutDelHeros> response) {

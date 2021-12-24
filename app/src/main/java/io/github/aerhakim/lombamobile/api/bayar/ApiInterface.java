@@ -16,7 +16,7 @@ import retrofit2.http.Part;
 
 
 public interface ApiInterface {
-    @GET("heros")
+    @GET("pembayaran")
     Call<GetHeros> getHeros();
     @Multipart
     @POST("pembayaran")

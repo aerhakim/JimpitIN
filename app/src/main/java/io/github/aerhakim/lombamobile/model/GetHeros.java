@@ -5,28 +5,23 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class GetHeros {
-    @SerializedName("status")
-    String status;
+
     @SerializedName("result")
-    List<Heros> listDataHeros;
-    @SerializedName("message")
-    String message;
-    public String getStatus() {
-        return status;
+    List<Heros> herosList;
+    String error;
+
+    public GetHeros(List<Heros> herosList, String error) {
+        this.herosList = herosList;
+        this.error = error;
     }
-    public void setStatus(String status) {
-        this.status = status;
+
+    public List<Heros> getHerosList() {
+        return herosList;
     }
-    public String getMessage() {
-        return message;
+
+    public String getError() {
+        return error;
     }
-    public void setMessage(String message) {
-        this.message = message;
-    }
-    public List<Heros> getListDataHeros() {
-        return listDataHeros;
-    }
-    public void setListDataHeros(List<Heros> listDataHeros) {
-        this.listDataHeros = listDataHeros;
-    }
+
+
 }
