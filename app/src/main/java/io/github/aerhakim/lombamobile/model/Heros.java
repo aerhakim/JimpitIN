@@ -14,15 +14,25 @@ public class Heros {
     private String date;
     @SerializedName("image")
     private String image;
-
+    @SerializedName("status")
+    private String status;
     public Heros(){}
 
-    public Heros(String id, String name, String description, String date, String image) {
+    public Heros(String id, String status, String name, String description, String date, String image) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.date = date;
+        this.status = status;
         this.image = image;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getId() {

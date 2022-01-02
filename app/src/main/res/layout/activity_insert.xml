@@ -294,6 +294,7 @@
             android:visibility="visible"
             android:layout_margin="10dp"
             android:textSize="@dimen/_12ssp"
+            android:inputType="number"
             android:paddingLeft="10dp"
             android:gravity="center_vertical"
             android:background="@drawable/bg_white"

@@ -16,7 +16,7 @@
 
         <androidx.cardview.widget.CardView
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_rowWeight="1"
@@ -34,11 +34,26 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/pending"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
+                    android:visibility="visible"
                     android:layout_margin="@dimen/_10sdp"
                     android:src="@drawable/pending" />
-
+                <ImageView
+                    android:id="@+id/success"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/success" />
+                <ImageView
+                    android:id="@+id/failed"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/failed" />
                 <TextView
                     android:id="@+id/jumlah"
                     android:layout_width="match_parent"
@@ -51,6 +66,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tvpending"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_45sdp"
@@ -58,8 +74,30 @@
                 android:text="Pending"
                 android:textColor="@color/black"
                 android:textSize="14sp"
+                android:visibility="visible"
                 android:textStyle="bold" />
-
+            <TextView
+                android:id="@+id/tvsuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Success"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvfailed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Failed"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/tanggal"
                 android:layout_width="wrap_content"

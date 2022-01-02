@@ -51,552 +51,552 @@
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <GridLayout
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/success" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 2000"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Sukses"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="23 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/success" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 3000"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Sukses"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="22 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/failed" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 4000"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Gagal"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="21 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/failed" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 3500"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Gagal"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="20 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/success" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 4000"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Sukses"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="19 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/success" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 5000"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Sukses"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="18 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/success" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 3000"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Sukses"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="17 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-
-                    android:layout_width="@dimen/_300sdp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-                    <androidx.cardview.widget.CardView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_rowWeight="1"
-                        android:layout_column="0"
-                        android:layout_columnWeight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:src="@drawable/success" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginStart="@dimen/_180sdp"
-                                android:text="Rp 1500"
-                                android:textColor="@color/black"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:text="Sukses"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_45sdp"
-                            android:layout_marginTop="@dimen/_24sdp"
-                            android:text="16 Juli 2021"
-                            android:textSize="12sp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-                </GridLayout>
-            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <GridLayout-->
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/success" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 2000"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Sukses"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="23 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+
+<!--                <GridLayout-->
+
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/success" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 3000"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Sukses"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="22 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+
+<!--                <GridLayout-->
+
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/failed" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 4000"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Gagal"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="21 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+
+<!--                <GridLayout-->
+
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/failed" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 3500"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Gagal"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="20 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+
+<!--                <GridLayout-->
+
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/success" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 4000"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Sukses"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="19 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+
+<!--                <GridLayout-->
+
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/success" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 5000"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Sukses"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="18 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+
+<!--                <GridLayout-->
+
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/success" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 3000"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Sukses"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="17 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+
+<!--                <GridLayout-->
+
+<!--                    android:layout_width="@dimen/_300sdp"-->
+<!--                    android:layout_height="70dp"-->
+
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_row="0"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_column="0"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardCornerRadius="16dp"-->
+<!--                        app:cardElevation="0dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:layout_margin="@dimen/_10sdp"-->
+<!--                                android:src="@drawable/success" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginStart="@dimen/_180sdp"-->
+<!--                                android:text="Rp 1500"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:text="Sukses"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_45sdp"-->
+<!--                            android:layout_marginTop="@dimen/_24sdp"-->
+<!--                            android:text="16 Juli 2021"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </GridLayout>-->
+<!--            </LinearLayout>-->
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
