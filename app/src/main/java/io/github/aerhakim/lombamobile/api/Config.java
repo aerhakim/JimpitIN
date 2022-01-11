@@ -11,8 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Config {
 
 
-    private static String BASE_URL="http://192.168.65.120:8080/lombamobile/";
-    public static final String IMAGES_URL = "http://192.168.65.120:8080/lombamobile/assets/files/image/";
+    private static String BASE_URL="http://192.168.1.1/lombamobile/";
+    public static final String IMAGES_URL = "http://192.168.1.1/lombamobile/assets/files/image/";
     private static Config config;
     private static Retrofit retrofit;
 
