@@ -57,11 +57,11 @@ public class OnBoardingActivity extends AppCompatActivity {
     }
 
     public void skip(View view) {
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, SignUpActivity.class));
         finish();
     }
     public void go(View view) {
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, SignUpActivity.class));
         finish();
     }
     public void next(View view) {

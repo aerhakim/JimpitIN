@@ -135,14 +135,14 @@ public class InsertActivity extends AppCompatActivity {
         final String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         if (mediaPath== null)
         {
-            Toast.makeText(getApplicationContext(), "Pilih gambar dulu, baru simpan ...!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Bukti Transaksi Wajib dilampirkan!", Toast.LENGTH_LONG).show();
         }
         else {
             File imagefile = new File(mediaPath);
             RequestBody reqBody = RequestBody.create(MediaType.parse("multipart/form-file"), imagefile);
             MultipartBody.Part partImage = MultipartBody.Part.createFormData("image", imagefile.getName(), reqBody);
 
-            Call<PostPutDelHeros> postHerosCall = mApiInterface.postHeros(partImage, RequestBody.create(MediaType.parse("text/plain"), "Rp " + edtName.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), edtDescription.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), date), RequestBody.create(MediaType.parse("text/plain"), INSERT_FLAG));
+            Call<PostPutDelHeros> postHerosCall = mApiInterface.postHeros(partImage, RequestBody.create(MediaType.parse("text/plain"), "" + edtName.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), edtDescription.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), date), RequestBody.create(MediaType.parse("text/plain"), INSERT_FLAG));
             postHerosCall.enqueue(new Callback<PostPutDelHeros>() {
                 @Override
                 public void onResponse(Call<PostPutDelHeros> call, Response<PostPutDelHeros> response) {

@@ -85,7 +85,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
     implementation 'com.hbb20:ccp:2.4.7'
-
+    implementation 'io.michaelrocks:libphonenumber-android:8.12.41'
     // Material Dialog Librar
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
 

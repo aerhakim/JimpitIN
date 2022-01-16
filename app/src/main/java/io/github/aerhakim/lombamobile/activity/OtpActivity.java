@@ -83,7 +83,8 @@ public class OtpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                            Toast.makeText(getApplicationContext(), "Verifikasi OTP Berhasil, Silahkan Login!", Toast.LENGTH_LONG).show();
                             finish();
                             finishAffinity();
                         }else {

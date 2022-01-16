@@ -58,10 +58,10 @@ public class HomeFragment extends Fragment {
     List<Agenda> agendaList;
     String userId;
     // Urls of our images.
-    String url1 = "http://192.168.219.120:8080/lombamobile/assets/files/image/g6.jpg";
-    String url2 = "http://192.168.219.120:8080/lombamobile/assets/files/image/g2.jpeg";
-    String url3 = "http://192.168.219.120:8080/lombamobile/assets/files/image/g3.jpeg";
-    String url4 = "http://192.168.219.120:8080/lombamobile/assets/files/image/g5.jpg";
+    String url1 = "http://192.168.74.120:8080/lombamobile/assets/files/image/g6.jpg";
+    String url2 = "http://192.168.74.120:8080/lombamobile/assets/files/image/g2.jpeg";
+    String url3 = "http://192.168.74.120:8080/lombamobile/assets/files/image/g3.jpeg";
+    String url4 = "http://192.168.74.120:8080/lombamobile/assets/files/image/g5.jpg";
 
 
     @Override
